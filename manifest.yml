@@ -3,15 +3,15 @@ declared-services:
   myObjectStorage:
     label: Object-Storage
     plan: Free
-  myClearDB:
+  KB-ClearDB:
     label: cleardb
     plan: spark
     
 applications:
-- name: WordPressForBluemix
+- name: WordPressPaaSKutxabank
   memory: 256M #The maximum memory to allocate to each application instance
   instances: 1 #The number of instances of the application to start
-  buildpack: https://github.com/cloudfoundry/php-buildpack#v4.3.7
+  buildpack: php_buildpack
   services:
   - myObjectStorage
-  - myClearDB
+  - KB-ClearDB
