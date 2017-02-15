@@ -3,7 +3,7 @@ declared-services:
   myObjectStorage:
     label: Object-Storage
     plan: Free
-  KB-ClearDB:
+  myClearDB:
     label: cleardb
     plan: spark
     
@@ -14,4 +14,4 @@ applications:
   buildpack: php_buildpack
   services:
   - myObjectStorage
-  - KB-ClearDB
+  - myClearDB
